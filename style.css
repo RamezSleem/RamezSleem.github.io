@@ -1,0 +1,647 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Sen", sans-serif;
+}
+/*navigation bar*/
+.navbar {
+  position: fixed;
+  background-color: #070808;
+  right: 0;
+  box-shadow: black 0 0 3px;
+  height: 5rem;
+  width: 100%;
+  bottom: 0;
+  animation-name: navAnime;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0, 0.3, 0.25, 1);
+}
+.navbar-nav {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  top: 2.7rem;
+}
+.navitems {
+  list-style: none;
+  width: 2.7rem;
+  margin: 4rem;
+}
+.navitems :hover {
+  width: 2.9rem;
+}
+.navbar a {
+  color: #f5d72d;
+  display: block;
+}
+.navbar a :hover {
+  color: #f3dc57;
+}
+@media screen and (max-width: 815px) {
+  .navbar {
+    height: 5rem;
+    width: 100%;
+    bottom: 0;
+  }
+  .navbar-nav {
+    display: flex;
+    top: 2.7rem;
+  }
+  .navitems {
+    margin: 2rem;
+  }
+}
+@media screen and (max-width: 508px) {
+  .navbar {
+    height: 5rem;
+    width: 100%;
+    bottom: 0;
+  }
+  .navbar-nav {
+    display: flex;
+    top: 2.7rem;
+  }
+  .navitems {
+    margin: 1.4rem;
+  }
+}
+@media screen and (max-width: 410px) {
+  .navbar {
+    height: 5rem;
+    width: 100%;
+    bottom: 0;
+  }
+  .navbar-nav {
+    display: flex;
+    top: 2.7rem;
+  }
+  .navitems {
+    margin: 1rem;
+    width: 2.4rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .navbar {
+    height: 5rem;
+    width: 100%;
+    bottom: 0;
+  }
+  .navbar-nav {
+    display: flex;
+    top: 2.7rem;
+  }
+  .navitems {
+    margin: 0.9rem;
+    width: 2.4rem;
+  }
+}
+
+/*Home page*/
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: #0a0a0a;
+}
+.homeItems {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+  position: absolute;
+}
+.homeItems h1 {
+  font-size: 100px;
+  text-align: center;
+  background-image: url(imgs/p11.jpeg);
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation-name: HomeText;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0, 0.3, 0.25, 1);
+}
+.homeItems h6 {
+  font-size: 30px;
+  text-align: center;
+  background-image: url(imgs/p11.jpeg);
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 50px;
+  animation-name: HomeText;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0, 0.3, 0.25, 1);
+}
+
+@keyframes HomeText {
+  from {
+    transform: translateX(-3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100;
+  }
+}
+@keyframes navAnime {
+  from {
+    transform: translateY(7em);
+  }
+}
+
+/*PROGRASS PAGE*/
+.Prograss {
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+}
+.Ptext {
+  position: relative;
+  top: 40px;
+}
+.cards {
+  height: 24rem;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 15%;
+}
+
+.card {
+  height: 100px;
+  width: 400px;
+  background-color: rgb(24, 24, 24);
+  display: inline-block;
+  margin: 7px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: black 0 0 10px;
+  opacity: -1;
+  transition: 1s;
+  transform: scale(0);
+}
+
+div .card[data-scroll="in"] {
+  opacity: 1;
+  transform: scale(1);
+  margin: 7px;
+  border-radius: 30px;
+}
+
+.line {
+  height: 10px;
+  width: 230px;
+  background-color: rgba(116, 116, 116, 0.1);
+  position: absolute;
+  left: 100px;
+  border-radius: 5px;
+}
+.linec1 {
+  height: 10px;
+  width: 190px;
+  background-color: rgb(238, 0, 0);
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: rgb(221, 0, 0) 0 0 15px;
+}
+.linec2 {
+  height: 10px;
+  width: 170px;
+  background-color: rgb(42, 0, 231);
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: rgb(0, 0, 221) 0 0 10px;
+}
+.linec3 {
+  height: 10px;
+  width: 40px;
+  background-color: rgb(255, 241, 44);
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: rgb(255, 208, 0) 0 0 10px;
+}
+.box {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position: relative;
+  top: 10px;
+  left: 0px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.persent1 {
+  position: relative;
+  transform: translateX(300px);
+  color: rgb(177, 0, 0);
+}
+
+.persent2 {
+  position: relative;
+  transform: translateX(315px);
+  color: rgb(32, 0, 177);
+}
+.persent3 {
+  position: relative;
+  transform: translateX(328px);
+  color: rgb(251, 255, 0);
+}
+.cardtaxt1 {
+  transform: translateX(30px);
+  color: rgb(177, 0, 0);
+}
+.cardtaxt2 {
+  transform: translateX(35px);
+  color: rgb(31, 0, 168);
+}
+.cardtaxt3 {
+  transform: translateX(45px);
+}
+.cardtaxt3 h3 {
+  color: rgb(251, 255, 0);
+}
+@media screen and (max-width: 470px) {
+  .Prograss {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(221, 221, 221);
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .cards {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    height: 100px;
+    width: 280px;
+    display: inline-block;
+    background-color: rgb(24, 24, 24);
+    margin: 7px;
+    position: relative;
+    transform: translateY(55%);
+    border-radius: 30px;
+    box-shadow: black 0 0 10px;
+  }
+  .line {
+    height: 10px;
+    width: 100px;
+    background-color: rgba(116, 116, 116, 0.1);
+    position: absolute;
+    left: 100px;
+    border-radius: 5px;
+  }
+  .linec1 {
+    height: 10px;
+    width: 95px;
+    background-color: rgb(238, 0, 0);
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: rgb(221, 0, 0) 0 0 15px;
+  }
+  .linec2 {
+    height: 10px;
+    width: 70px;
+    background-color: rgb(42, 0, 231);
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: rgb(0, 0, 221) 0 0 10px;
+  }
+  .linec3 {
+    height: 10px;
+    width: 20px;
+    background-color: rgb(255, 241, 44);
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: rgb(255, 208, 0) 0 0 10px;
+  }
+  .box {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: 10px;
+    left: 0px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .persent1 {
+    position: relative;
+    transform: translateX(180px);
+    color: rgb(177, 0, 0);
+  }
+
+  .persent2 {
+    position: relative;
+    transform: translateX(190px);
+    color: rgb(32, 0, 177);
+  }
+  .persent3 {
+    position: relative;
+    transform: translateX(203px);
+    color: rgb(251, 255, 0);
+  }
+  .cardtaxt1 {
+    transform: translateX(30px);
+    color: rgb(177, 0, 0);
+  }
+  .cardtaxt2 {
+    transform: translateX(35px);
+    color: rgb(31, 0, 168);
+  }
+  .cardtaxt3 {
+    transform: translateX(45px);
+  }
+  .cardtaxt3 h3 {
+    color: rgb(251, 255, 0);
+  }
+}
+/*Edits*/
+.MyEdits {
+  width: 100%;
+  height: 85vh;
+  background-color: #070808;
+  text-align: center;
+  padding: 30px;
+}
+.MyEdits h1 {
+  color: #ffffff;
+  padding: 0 30px 30px 30px;
+}
+.Acard {
+  height: 365px;
+  width: 250px;
+  background-color: #f5f7fa;
+  border-radius: 30px;
+  box-shadow: 3px 3px 3px #f5f7fa, -3px -3px 3px #ffffff;
+  overflow: hidden;
+  margin: 20px;
+  padding: 0;
+}
+.img {
+  height: 200px;
+  width: 80%;
+  background-image: url(imgs/2dgt.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0px auto;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 25px;
+  box-shadow: 0 0 10px #1b1b1b, -3px -3px 3px #ffffff;
+}
+.img5 {
+  height: 200px;
+  width: 80%;
+  background-image: url(img/your\Name.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0px auto;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 25px;
+  box-shadow: 0 0 10px #1b1b1b, -3px -3px 3px #ffffff;
+}
+.img3 {
+  height: 200px;
+  width: 80%;
+  background-image: url(img/lacasa.png);
+  background-size: cover;
+  background-position: center;
+  margin: 0px auto;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 25px;
+  box-shadow: 0 0 10px #1b1b1b, -3px -3px 3px #ffffff;
+}
+.img4 {
+  height: 200px;
+  width: 80%;
+  background-image: url(img/fivefeetapart.png);
+  background-size: 230px;
+  background-position: center;
+  margin: 0px auto;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 25px;
+  box-shadow: 0 0 10px #1b1b1b, -3px -3px 3px #ffffff;
+}
+.img2 {
+  height: 200px;
+  width: 80%;
+  background-image: url(img/ramimalek.png);
+  background-size: 230px;
+  background-position: center;
+  margin: 0px auto;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 25px;
+  box-shadow: 0 0 10px #1b1b1b, -3px -3px 3px #ffffff;
+}
+.img6 {
+  height: 200px;
+  width: 80%;
+  background-image: url(img/mosalah.png);
+  background-size: 230px;
+  background-position: center;
+  margin: 0px auto;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 25px;
+  box-shadow: 0 0 10px #1b1b1b, -3px -3px 3px #ffffff;
+}
+.img5 {
+  height: 200px;
+  width: 80%;
+  background-image: url(img/your\ Name.png);
+  background-size: 230px;
+  background-position: center;
+  margin: 0px auto;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 25px;
+  box-shadow: 0 0 10px #1b1b1b, -3px -3px 3px #ffffff;
+}
+.cardAtitle {
+  padding: 20px;
+  font-size: 25px;
+}
+.cardBut {
+  border: rgb(219, 0, 0) solid 2px;
+  padding: 10px;
+  color: rgb(221, 0, 0);
+}
+.cardBut:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(219, 0, 0);
+}
+@media screen and (max-width: 430px) {
+  .MyEdits {
+    height: 88vh;
+    padding: 40px;
+  }
+}
+
+/* web projects*/
+.wepP {
+  width: 100%;
+  height: 80vh;
+}
+.Rside {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  box-shadow: inset -5px -5px 5px #ffffff;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+}
+.Webtitle {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  font-size: 30px;
+}
+.Rimg {
+  width: 360px;
+  height: 200px;
+  background-image: url(img/myp.png);
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border-radius: 10px;
+  position: relative;;
+  top: 90px;
+  box-shadow: black 0 0 10px;
+}
+.Rtitle{
+  position: relative;
+  top: 130px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.ShowBut{
+  position: relative;
+  top: 170px;
+  right: 30px;
+  border: solid 3px rgb(241, 197, 0);
+  padding: 10px 20px 10px 20px;
+  color: rgb(236, 181, 0);
+  font-family: "Sen", sans-serif;
+
+}
+.DownBut{
+  position: relative;
+  top: 170px;
+  right: -40px;
+  border: solid 3px green;
+  padding: 10px 20px 10px 20px;
+  color: green;
+  font-family: "Sen", sans-serif;
+}
+.ShowBut:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(250, 192, 0);
+}
+.DownBut:hover{
+  color: rgb(255, 255, 255);
+  background-color: green;
+}
+
+
+@media screen and (max-width:430px){
+  .Rimg{
+    width: 250px;
+    height: 140px;
+  }
+  .Rtitle{
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .ShowBut {
+    right: 0px;
+  }
+  .DownBut{
+    right: 0;
+  }
+  .wepP {
+    width: 100%;
+    height: 70vh;
+  }
+}
+/*Contact*/
+.Contact {
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(24, 24, 24);
+  text-align: center;
+}
+.contactbox{
+  width:100%;
+  height: 50px;
+  display: inline-flex;
+  text-align: center;
+  position: relative;
+  top: 180px;
+  justify-content: center;
+}
+.contactbox a{
+  height: 50px;
+  width: 50px;
+  margin: 0 90px 0 90px;
+  color: #f5d72d;
+}
+.contactbox a:nth-child(1):hover{
+  color: #e400d8;
+}
+.contactbox a:nth-child(2):hover{
+  color: #1f58d3;
+}
+.contactbox a:nth-child(3):hover{
+  color: #00aeff;
+}
+.contactbox a:nth-child(4):hover{
+  color: #ff0000;
+}
+@media screen and (max-width:820px){
+  .contactbox a{
+    margin: 0 50px 0 50px;
+  }
+}
+@media screen and (max-width:600px){
+  .contactbox a{
+    margin: 0 20px 0 20px;
+  }
+}
